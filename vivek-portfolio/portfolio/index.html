@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivek Gupta — Software Developer & Data Analyst</title>
+<meta name="description" content="Vivek Gupta — B.Tech student, Java & full-stack developer, problem solver. Real client work, internships, hackathons, and leadership.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-bracket">&lt;</span>
+    <span class="loader-name">Vivek<span class="loader-cursor">_</span></span>
+    <span class="loader-bracket">/&gt;</span>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- ===== CURSOR GLOW (desktop only, added via JS) ===== -->
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<!-- ===== BACKGROUND CANVAS ===== -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <a href="#home" class="nav-logo">VG<span>.</span></a>
+  <nav class="nav-links" id="nav-links">
+    <a href="#about" data-nav>About</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#projects" data-nav>Projects</a>
+    <a href="#experience" data-nav>Experience</a>
+    <a href="#achievements" data-nav>Achievements</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+  <a href="#contact" class="nav-cta">Let's talk</a>
+  <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="home">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow mono">// building things that work</p>
+        <h1 class="hero-title">
+          Hi, I'm <span class="grad-text">Vivek Gupta</span>
+        </h1>
+        <div class="hero-role">
+          <span class="mono role-prefix">const role =</span>
+          <span class="typed-role" id="typed-role"></span><span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          B.Tech student  who learns by building —
+          from an AR hackathon project to a paid client website. I turn real problems
+          into working software, then ship it.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="assets/images/projects/Vivek_Kumar_Gupta_Resume_.pdf" class="btn btn-ghost" download>Resume</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" data-count="8.93">0</span><span class="stat-label">CGPA</span></div>
+          <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Featured Projects</span></div>
+          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Internships</span></div>
+          <div class="stat"><span class="stat-num" data-count="1">0</span><span class="stat-label">Paid Client</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="avatar-frame">
+          <div class="avatar-ring"></div>
+          <img src="assets/images/vivek passport.png" alt="Vivek Gupta" class="avatar-img">
+          <span class="avatar-badge mono">Available for opportunities</span>
+        </div>
+        <div class="code-window" id="code-window">
+          <div class="code-window-bar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="code-window-title mono">about_me.js</span>
+          </div>
+          <pre class="code-window-body mono"><code id="code-typed"></code></pre>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <p class="section-eyebrow mono">01 · About</p>
+    <h2 class="section-title reveal">Learning by building, one problem at a time.</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a B.Tech student currently in my <strong>7th semester</strong>, carrying a
+          CGPA of <strong>8.93</strong>. Somewhere between lecture halls and late-night
+          debugging sessions, I found the thing I actually enjoy: taking a messy
+          real-world problem and turning it into software that people use.</p>
+        <p>That's shown up in a lot of different rooms — a hackathon team building an
+          AR viewer, an MSME internship writing Java from scratch, a restaurant owner
+          who paid me for a website, a shop owner who needed to stop losing track of
+          customer credit. Academic projects taught me the theory; client work and
+          internships taught me the rest.</p>
+        <p>I lead when I can — two years running an NSS unit — and I keep showing up
+          to hackathons, competitions, and internships because that's where the
+          fastest learning happens.</p>
+      </div>
+      <div class="about-facts reveal">
+        <div class="fact-card glass">
+          <span class="fact-label mono">Status</span>
+          <span class="fact-value">7th Semester, B.Tech</span>
+        </div>
+        <div class="fact-card glass">
+          <span class="fact-label mono">CGPA</span>
+          <span class="fact-value">8.93 / 10</span>
+        </div>
+        <div class="fact-card glass">
+          <span class="fact-label mono">Focus</span>
+          <span class="fact-value">Java · Full-Stack · Data</span>
+        </div>
+        <div class="fact-card glass">
+          <span class="fact-label mono">Approach</span>
+          <span class="fact-value">Learn by building</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <p class="section-eyebrow mono">02 · Skills</p>
+    <h2 class="section-title reveal">The toolkit behind the builds.</h2>
+
+    <div class="skills-cols">
+      <div class="skills-col reveal">
+        <h3 class="skills-col-title">Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Python (basic)</span>
+        </div>
+      </div>
+      <div class="skills-col reveal">
+        <h3 class="skills-col-title">Tools</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Canva</span>
+          <span class="skill-tag">Figma</span>
+        </div>
+      </div>
+      <div class="skills-col reveal">
+        <h3 class="skills-col-title">Areas</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Web Development</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">Java Development</span>
+          <span class="skill-tag">Database Management</span>
+          <span class="skill-tag">Networking Basics</span>
+          <span class="skill-tag">UI Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <p class="section-eyebrow mono">03 · Projects</p>
+    <h2 class="section-title reveal">Things I've shipped.</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card glass reveal">
+        <div class="project-media"><img src="assets/images/projects/viewer3d.svg" alt="3D Viewer and AR project" loading="lazy"></div>
+        <div class="project-body">
+          <h3>3D Viewer → AR Experience</h3>
+          <p>Built with my team for Smart India Hackathon in first semester. An
+            interactive 3D viewer, later extended into AR — visitors scanned
+            QR codes to view models in AR during TechBlitz.</p>
+          <div class="project-tags"><span>3D</span><span>AR</span><span>QR Codes</span><span>Teamwork</span></div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub ↗</a>
+            <a href="#" class="link-btn">Live Demo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal">
+        <div class="project-media"><img src="assets/images/projects/encryption.svg" alt="File encryption tool" loading="lazy"></div>
+        <div class="project-body">
+          <h3>File Encryption Tool</h3>
+          <p>Built during my Java internship at MSME. Encrypts user files and
+            generates a secure key; files are decrypted later using that key.
+            Focused on core Java and file handling.</p>
+          <div class="project-tags"><span>Java</span><span>Encryption</span><span>File I/O</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Vivek-Gupta-7/File-Encryption-tool" class="link-btn">GitHub ↗</a>
+            <a href="https://file-encryption-tool-production-d0df.up.railway.app/" class="link-btn">Live Demo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal">
+        <div class="project-media"><img src="assets/images/projects/restaurant.svg" alt="Restaurant website client project" loading="lazy"></div>
+        <div class="project-body">
+          <h3>OrangeBBQ_Restraunt</h3>
+          <p>Visited multiple restaurants with my teammates and convinced an
+            owner to go digital. Designed, built, and deployed the site —
+            my first paid freelance project.</p>
+          <div class="project-tags"><span>Client Work</span><span>UI Design</span><span>Freelance</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Vivek-Gupta-7/Smoke-House" class="link-btn">GitHub ↗</a>
+            <a href="https://orangebbqsmokehouse.in/" class="link-btn">Live Demo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal">
+        <div class="project-media"><img src="assets/images/projects/credit.svg" alt="Customer credit management system" loading="lazy"></div>
+        <div class="project-body">
+          <h3>DueTrack</h3>
+          <p>
+           A smart customer credit management system developed for a local business to
+           track outstanding dues ("Baki"). It records transactions, sends payment
+           reminders, and automatically clears customer records once payments are
+           completed, simplifying day-to-day credit management.
+           </p>
+
+          <div class="project-tags"><span>Java</span><span>Database</span><span>Real Business</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Vivek-Gupta-7/duetrack" class="link-btn">GitHub ↗</a>
+            <a href="https://github.com/Vivek-Gupta-7/duetrack" class="link-btn">Live Demo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal">
+        <div class="project-media"><img src="assets/images/projects/dashboard.svg" alt="Blinkit sales Power BI dashboard" loading="lazy"></div>
+        <div class="project-body">
+          <h3>Blinkit Sales Dashboard</h3>
+          <p>An interactive Power BI dashboard analyzing sales data —
+            charts, KPIs, and business insights built to answer real
+            questions about performance.</p>
+          <div class="project-tags"><span>Power BI</span><span>Data Analysis</span><span>KPIs</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Vivek-Gupta-7/Blinkit" class="link-btn">GitHub ↗</a>
+            <a href="https://github.com/Vivek-Gupta-7/Blinkit" class="link-btn">Live Demo ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass reveal more-card" id="more-projects-card">
+  <div class="project-media">
+    <img src="assets/images/projects/Git.png" alt="GitHub Projects" loading="lazy">
+  </div>
+
+  <div class="project-body">
+    <h3>Explore More on GitHub</h3>
+
+    <p>
+      Discover my complete collection of real-world projects, technical experiments, and open-source work. A showcase of continuous learning, innovation, and software development beyond my featured projects.
+    </p>
+
+    <div class="project-tags">
+      <span>Open Source</span>
+      <span>Projects</span>
+      <span>GitHub</span>
+    </div>
+
+    <div class="project-links">
+      <a href="https://github.com/Vivek-Gupta-7" target="_blank" rel="noopener" class="link-btn">
+        GitHub ↗
+      </a>
+
+      <a href="https://github.com/Vivek-Gupta-7" target="_blank" rel="noopener" class="link-btn">
+        Explore More ↗
+      </a>
+    </div>
+  </div>
+</article>
+
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <p class="section-eyebrow mono">04 · Experience</p>
+    <h2 class="section-title reveal">Real work, real clients.</h2>
+
+    <div class="exp-highlight glass reveal">
+      <h3>Restaurant Website Development — Freelance Client</h3>
+      <p>Worked directly with a client end-to-end: requirement gathering, UI design,
+        development, deployment, and ongoing communication. Paid on successful
+        completion — my first real-world proof that I can deliver, not just build.</p>
+      <div class="project-tags">
+        <span>Requirement Gathering</span><span>UI Design</span><span>Development</span>
+        <span>Deployment</span><span>Client Communication</span>
+      </div>
+    </div>
+
+    <h3 class="sub-heading reveal">Internships</h3>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-content glass">
+          <span class="tl-org mono">MSME</span>
+          <h4>Java Development Internship</h4>
+          <p>Core Java, OOP, Collections, file handling, and full project
+            development — culminated in the File Encryption Tool.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-content glass">
+          <span class="tl-org mono">AMTRON</span>
+          <h4>Networking Internship</h4>
+          <p>Networking fundamentals and hands-on practice, small projects,
+            and team collaboration.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-content glass">
+          <span class="tl-org mono">Oasis Infobyte</span>
+          <h4>Java Development Internship</h4>
+          <p>Built an ATM Interface and a Binary Search Game. Received a
+            Best Performer Certificate and a Letter of Recommendation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section class="section" id="achievements">
+    <p class="section-eyebrow mono">05 · Achievements</p>
+    <h2 class="section-title reveal">Highlights along the way.</h2>
+
+    <div class="timeline timeline-alt">
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>8.93 CGPA</h4><p>Consistent academic performance through 7th semester.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>National NSS Representative</h4><p>Represented Assam at the National NSS Festival.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>1st Position — National NSS Festival</h4><p>Won first position representing Assam on the national stage.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>IBM Industrial Visit</h4><p>Enterprise Design Challenge exposure and hands-on learning.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>1st Position — Enterprise Design Challenge</h4><p>Won first position in the innovation-focused challenge.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>3rd Position — Innovation Competition</h4><p>Recognized among top entries for original problem-solving.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>Quarterly Newsletter Team</h4><p>Recognized by the Dean's Office for contribution.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>Best Performer Award</h4><p>Received alongside a Letter of Recommendation.</p></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"></div>
+        <div class="tl-content glass"><h4>First Paid Freelance Project</h4><p>Delivered a client website and got paid for it.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP ===== -->
+  <section class="section" id="leadership">
+    <p class="section-eyebrow mono">06 · Leadership</p>
+    <h2 class="section-title reveal">Leading, not just building.</h2>
+    <div class="leadership-card glass reveal">
+      <div class="leadership-icon" aria-hidden="true">★</div>
+      <div>
+        <h3>NSS Unit 3 — Unit Leader</h3>
+        <p>Served for two years, organizing social activities and leading a
+          team of volunteers. Represented Assam at the National NSS Festival
+          and won first position — leadership that showed up on a national
+          stage, not just on paper.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATES ===== -->
+  <section class="section" id="certificates">
+    <p class="section-eyebrow mono">07 · Certificates</p>
+    <h2 class="section-title reveal">Proof of the work.</h2>
+    <div class="cert-grid">
+
+  <a href="assets/images/projects/NSS Certificate KU.jpeg" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">📜</span>
+    <span>NSS Certificates</span>
+  </a>
+
+   <a href="assets/images/projects/NorthEastFestival Sikkim.jpeg" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">📜</span>
+    <span>North East Festival Certificates</span>
+  </a>
+
+  <a href="assets/images/projects/IBM Enterprise Design Thinking Practitioner.pdf" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">📜</span>
+    <span>IBM Industrial Training</span>
+  </a>
+
+  <a href="assets/certificates/innovation.pdf" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">🏆</span>
+    <span>Innovation Competition</span>
+  </a>
+
+  <a href="assets/images/projects/NEWSLETTER APPRECIATION KU.jpeg" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">⭐</span>
+    <span>Dean Recognition</span>
+  </a>
+
+  <a href="assets/images/TRTC Internship.jpeg" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">💻</span>
+    <span>MSME Java Internship</span>
+  </a>
+
+  <a href="assets/images/Amtron Internship.jpeg" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">🌐</span>
+    <span>AMTRON Internship</span>
+  </a>
+
+  <a href="assets/images/projects/Completion Certificate - Vivek Kumar Gupta.pdf" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">🚀</span>
+    <span>Oasis Infobyte Internship</span>
+  </a>
+
+  <a href="assets/images/projects/Appreciation Certificate - Vivek Kumar Gupta.pdf" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">🥇</span>
+    <span> OASIS Best Performer</span>
+  </a>
+
+  <a href="assets/images/projects/LOR - Vivek Kumar Gupta.pdf" target="_blank" class="cert-card glass reveal">
+    <span class="cert-icon">📄</span>
+    <span> OASIS Letter of Recommendation</span>
+  </a>
+
+</div>
+    <p class="cert-note mono">More certificates added as they're issued.</p>
+  </section>
+
+  
+
+  <!-- ===== RESUME ===== -->
+  <section class="section" id="resume">
+    <p class="section-eyebrow mono">09 · Resume</p>
+    <h2 class="section-title reveal">The one-page version.</h2>
+    <div class="resume-card glass reveal">
+      <div>
+        <h3>Vivek Gupta — Resume</h3>
+        <p>Education, internships, projects, and achievements in one document.</p>
+      </div>
+      <div class="resume-actions">
+        <a href="assets/images/projects/Vivek_Kumar_Gupta_Resume_.pdf" class="btn btn-primary" download>Download Resume</a>
+        <a href="assets/images/projects/Vivek_Kumar_Gupta_Resume_.pdf" target="_blank" rel="noopener" class="btn btn-ghost">View Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <p class="section-eyebrow mono">10 · Contact</p>
+    <h2 class="section-title reveal">Let's build something.</h2>
+    <div class="contact-grid">
+      <form class="contact-form glass reveal" id="contact-form">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Vivek Gupta">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Gmail">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell me about the opportunity or project…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="contact-submit">Send Message</button>
+        <p class="form-status mono" id="form-status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-info reveal">
+        <a href=Vivekgupta1st@gmail.com class="contact-link glass">
+          <span class="contact-icon">✉</span><span>Gmail</span>
+        </a>
+        <a href="tel:+91 0000000000" class="contact-link glass">
+          <span class="contact-icon">☎</span><span>+91 6003444793</span>
+        </a>
+        <a href="www.linkedin.com/in/vivek-gupta-078962306" target="_blank" rel="noopener" class="contact-link glass">
+          <span class="contact-icon">in</span><span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Vivek-Gupta-7" target="_blank" rel="noopener" class="contact-link glass">
+          <span class="contact-icon">⌥</span><span>Git Hub</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="contact-link glass">
+          <span class="contact-icon">◎</span><span>Instagram</span>
+        </a>
+        <a href="https://x.com/VivekGupta__7" target="_blank" rel="noopener" class="contact-link glass">
+          <span class="contact-icon">𝕏</span><span>X (Twitter)</span>
+        </a>
+        <div class="contact-link glass">
+          <span class="contact-icon">⌖</span><span>Assam, India</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <a href="#home" class="footer-logo">VG<span>.</span></a>
+  <div class="footer-social">
+    <a href="Vivekgupta1st@email.com" aria-label="Email">✉</a>
+    <a href="www.linkedin.com/in/vivek-gupta-078962306" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+    <a href="https://x.com/VivekGupta__7" target="_blank" rel="noopener" aria-label="GitHub">⌥</a>
+    <a href="" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+  </div>
+  <p class="footer-copy mono">© <span id="year"></span> Vivek Gupta. Built Solution.</p>
+  <button id="to-top" aria-label="Back to top">↑</button>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
